@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>记录一次事故 | Hexo</title>
+  <title>记录项目中一个令人汗流浃背的小插曲之改库跑路？？？？ | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="记录项目中一个令人汗流浃背的小插曲之改库跑路？？？？事情背景有一天1组的同学发现，他们进行从日期截止至x月x日之前创建的所有工作流，绑定的技能id全被改了。 四周一问，谁也都说，不知道发生了什么。 最后导师归因的时候说是有人update了没有where，导致全表扫描了。而恰好，我组的同学正好是唯一有权限接触到数据库的几位……这顶小黑锅肯定就是由我们漂漂亮亮地背上了。 当然，权限出在我们几位身上，工">
+  <meta name="description" content="事情背景有一天1组的同学发现，他们进行从日期截止至x月x日之前创建的所有工作流，绑定的技能id全被改了。 四周一问，谁也都说，不知道发生了什么。 最后导师归因的时候说是有人update了没有where，导致全表扫描了。而恰好，我组的同学正好是唯一有权限接触到数据库的几位……这顶小黑锅肯定就是由我们漂漂亮亮地背上了。 当然，权限出在我们几位身上，工作流的技能之外部知识库id也是跟我们有关的一环，我觉">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记录一次事故">
+<meta property="og:title" content="记录项目中一个令人汗流浃背的小插曲之改库跑路？？？？">
 <meta property="og:url" content="http://example.com/2024/09/10/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E4%BA%8B%E6%95%85/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="记录项目中一个令人汗流浃背的小插曲之改库跑路？？？？事情背景有一天1组的同学发现，他们进行从日期截止至x月x日之前创建的所有工作流，绑定的技能id全被改了。 四周一问，谁也都说，不知道发生了什么。 最后导师归因的时候说是有人update了没有where，导致全表扫描了。而恰好，我组的同学正好是唯一有权限接触到数据库的几位……这顶小黑锅肯定就是由我们漂漂亮亮地背上了。 当然，权限出在我们几位身上，工">
+<meta property="og:description" content="事情背景有一天1组的同学发现，他们进行从日期截止至x月x日之前创建的所有工作流，绑定的技能id全被改了。 四周一问，谁也都说，不知道发生了什么。 最后导师归因的时候说是有人update了没有where，导致全表扫描了。而恰好，我组的同学正好是唯一有权限接触到数据库的几位……这顶小黑锅肯定就是由我们漂漂亮亮地背上了。 当然，权限出在我们几位身上，工作流的技能之外部知识库id也是跟我们有关的一环，我觉">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-09-10T15:08:57.000Z">
-<meta property="article:modified_time" content="2024-09-10T15:09:14.189Z">
+<meta property="article:modified_time" content="2024-09-10T15:23:28.861Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -85,7 +85,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      记录一次事故
+      记录项目中一个令人汗流浃背的小插曲之改库跑路？？？？
     </h1>
   
 
@@ -93,17 +93,22 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="记录项目中一个令人汗流浃背的小插曲之改库跑路？？？？"><a href="#记录项目中一个令人汗流浃背的小插曲之改库跑路？？？？" class="headerlink" title="记录项目中一个令人汗流浃背的小插曲之改库跑路？？？？"></a>记录项目中一个令人汗流浃背的小插曲之改库跑路？？？？</h1><h2 id="事情背景"><a href="#事情背景" class="headerlink" title="事情背景"></a>事情背景</h2><p>有一天1组的同学发现，他们进行从日期截止至x月x日之前创建的所有工作流，绑定的技能id全被改了。</p>
+        <h2 id="事情背景"><a href="#事情背景" class="headerlink" title="事情背景"></a>事情背景</h2><p>有一天1组的同学发现，他们进行从日期截止至x月x日之前创建的所有工作流，绑定的技能id全被改了。</p>
 <p>四周一问，谁也都说，不知道发生了什么。</p>
 <p>最后导师归因的时候说是有人update了没有where，导致全表扫描了。<br>而恰好，我组的同学正好是唯一有权限接触到数据库的几位……<br>这顶小黑锅肯定就是由我们漂漂亮亮地背上了。</p>
 <p>当然，权限出在我们几位身上，工作流的技能之外部知识库id也是跟我们有关的一环，我觉得这个定位很合理，是唯一的可能。</p>
 <p>但是真的不甘心，哈哈。<br>于是想到了，mysql有binlog，应该可以查到数据库的删改记录呀。</p>
 <p>一番操作：</p>
 <p>（我们使用docker compose直接部署的项目，所以进入到docker mysql里面看吧）</p>
-<figure class="highlight docker"><figcaption><span>ps</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">docker -t exec mysql</span><br><span class="line">mysql -uuser -ppwd</span><br><span class="line">show variables like ‘bin_log’;</span><br><span class="line">结果，华丽丽地是off。。。。</span><br><span class="line">根本没开binlog啊。。。。。可能前辈们是处于一些性能开销的考虑吧。</span><br><span class="line">如果是小项目的话，设置一下清理时间比如在my.cnf里面开启，</span><br><span class="line"></span><br><span class="line">expire_logs_days=<span class="number">7</span>   <span class="comment"># 只保留最近7天的二进制日志</span></span><br><span class="line"></span><br><span class="line">然后减少内存上的占用，至于性能开销这部分，还是只能如此吧。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br><span class="line">docker  exec -it mysql </span><br><span class="line">mysql -uuser -ppwd</span><br><span class="line">show variables like ‘bin_log’; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+<p>结果，华丽丽地是off。。。。<br>根本没开binlog啊。。。。。可能前辈们是处于一些性能开销的考虑吧。</p>
+<p>ps. 本文涉及到一些数据隐私的问题，都没有截图，凭记忆写了</p>
+<p>如果是小项目的话，设置一下清理时间比如在my.cnf里面开启.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">expire_logs_days=7   # 只保留最近7天的二进制日志</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>然后减少内存上的占用，至于性能开销这部分，还是只能如此吧&gt;&lt;</p>
 <p>不过，虽然，这次没有用到。<br>还是学习了一下如何恢复mysql数据库到某版本。</p>
-<h4 id="前提条件："><a href="#前提条件：" class="headerlink" title="前提条件："></a>前提条件：</h4><ol>
+<h2 id="如何从BINLOG中恢复数据库"><a href="#如何从BINLOG中恢复数据库" class="headerlink" title="如何从BINLOG中恢复数据库"></a>如何从BINLOG中恢复数据库</h2><h4 id="前提条件："><a href="#前提条件：" class="headerlink" title="前提条件："></a>前提条件：</h4><ol>
 <li><strong>启用了二进制日志</strong>：确保在执行数据变更前，已经启用了 MySQL 的二进制日志（<code>log-bin</code>）。</li>
 <li><strong>有全备份</strong>：通常情况下，恢复流程分为两步：先恢复最近的全备份，然后应用二进制日志来恢复到指定的时间点。</li>
 </ol>
@@ -147,7 +152,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/09/10/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E4%BA%8B%E6%95%85/" data-id="cm0wkra7n0002lanm9jp24udh" data-title="记录一次事故" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/09/10/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E4%BA%8B%E6%95%85/" data-id="cm0wl0n2f0002nnnm8hys6c0u" data-title="记录项目中一个令人汗流浃背的小插曲之改库跑路？？？？" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -198,7 +203,7 @@
       <ul>
         
           <li>
-            <a href="/2024/09/10/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E4%BA%8B%E6%95%85/">记录一次事故</a>
+            <a href="/2024/09/10/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E4%BA%8B%E6%95%85/">记录项目中一个令人汗流浃背的小插曲之改库跑路？？？？</a>
           </li>
         
           <li>
