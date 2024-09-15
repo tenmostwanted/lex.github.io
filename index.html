@@ -69,6 +69,195 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Graph-RAG调研报告" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/09/15/Graph-RAG%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/" class="article-date">
+  <time class="dt-published" datetime="2024-09-15T07:47:05.000Z" itemprop="datePublished">2024-09-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/09/15/Graph-RAG%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/">Graph RAG调研报告</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/index/image.png" alt="alt text"></p>
+<p>测试图片上传是否成功</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/09/15/Graph-RAG%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/" data-id="cm139xlh80000s8nmhayp9vzp" data-title="Graph RAG调研报告" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-阿里云体验" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/09/11/%E9%98%BF%E9%87%8C%E4%BA%91%E4%BD%93%E9%AA%8C/" class="article-date">
+  <time class="dt-published" datetime="2024-09-11T09:22:05.268Z" itemprop="datePublished">2024-09-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/09/11/%E9%98%BF%E9%87%8C%E4%BA%91%E4%BD%93%E9%AA%8C/">阿里云体验</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>阿里云OSS（Object Storage Service）是阿里云提供的一种基于互联网的数据存储服务。它允许用户通过简单的接口存储和管理任意类型的数据。OSS 支持海量数据的存储和高并发访问，提供了高可用性和安全性，适合存储大规模的非结构化数据，如图片、音频、视频、备份文件等。</p>
+<h3 id="（一）了解阿里云OSS服务"><a href="#（一）了解阿里云OSS服务" class="headerlink" title="（一）了解阿里云OSS服务"></a>（一）了解阿里云OSS服务</h3><p>阿里云OSS是一种对象存储服务，具有以下特点：</p>
+<ul>
+<li><strong>对象存储</strong>：支持海量数据存储，数据以对象形式存储。</li>
+<li><strong>高可用性与持久性</strong>：提供99.9999999999%的数据持久性，适合长期存储和备份。</li>
+<li><strong>数据分级存储</strong>：根据数据访问频率可选择标准存储、低频存储和归档存储，优化成本。</li>
+<li><strong>全网加速访问</strong>：通过CDN与全球加速点，用户可以实现全球范围内的低延迟访问。</li>
+</ul>
+<h3 id="（二）对比ECS本地存储、OSS、NAS存储服务的特点"><a href="#（二）对比ECS本地存储、OSS、NAS存储服务的特点" class="headerlink" title="（二）对比ECS本地存储、OSS、NAS存储服务的特点"></a>（二）对比ECS本地存储、OSS、NAS存储服务的特点</h3><table>
+<thead>
+<tr>
+<th>存储类型</th>
+<th><strong>ECS本地存储</strong></th>
+<th><strong>OSS（对象存储服务）</strong></th>
+<th><strong>NAS（网络附加存储）</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>存储类型</strong></td>
+<td>块存储</td>
+<td>对象存储</td>
+<td>文件存储</td>
+</tr>
+<tr>
+<td><strong>数据结构</strong></td>
+<td>适用于操作系统和应用的块级数据访问，类似于本地硬盘</td>
+<td>适合存储非结构化数据（图片、音频、视频等）</td>
+<td>共享文件系统，适合需要多个ECS实例共享文件</td>
+</tr>
+<tr>
+<td><strong>典型使用场景</strong></td>
+<td>操作系统、数据库等需要高I&#x2F;O性能的场景</td>
+<td>静态资源（图片、视频、备份文件）存储、备份和归档</td>
+<td>大型网站、分布式应用，共享文件存储，如日志管理、文件共享</td>
+</tr>
+<tr>
+<td><strong>数据访问方式</strong></td>
+<td>直接挂载为虚拟磁盘，块设备访问</td>
+<td>RESTful API访问，基于HTTP&#x2F;HTTPS</td>
+<td>通过标准文件协议（NFS&#x2F;SMB）挂载，文件系统访问</td>
+</tr>
+<tr>
+<td><strong>性能</strong></td>
+<td>高I&#x2F;O性能，适合低延迟和高读写场景</td>
+<td>高吞吐量，适合海量数据的高并发访问</td>
+<td>文件共享，适合中等I&#x2F;O需求和多实例共享访问</td>
+</tr>
+<tr>
+<td><strong>持久性</strong></td>
+<td>与ECS实例生命周期相关</td>
+<td>高持久性，数据冗余存储</td>
+<td>高持久性，冗余备份</td>
+</tr>
+<tr>
+<td><strong>费用</strong></td>
+<td>随ECS实例按量付费</td>
+<td>根据存储容量和流量计费，价格灵活</td>
+<td>按实际使用的存储空间和流量计费</td>
+</tr>
+<tr>
+<td><strong>扩展性</strong></td>
+<td>受限于实例配置</td>
+<td>高扩展性，支持海量存储</td>
+<td>支持自动扩展</td>
+</tr>
+</tbody></table>
+<h3 id="（三）三种存储服务的适用应用场景"><a href="#（三）三种存储服务的适用应用场景" class="headerlink" title="（三）三种存储服务的适用应用场景"></a>（三）三种存储服务的适用应用场景</h3><ol>
+<li><p><strong>ECS本地存储</strong>：</p>
+<ul>
+<li>适用于对高性能和低延迟有要求的场景，例如数据库、操作系统及应用的主存储。</li>
+<li>常用于高I&#x2F;O密集型工作负载，如实时分析、事务处理、数据库应用等。</li>
+</ul>
+</li>
+<li><p><strong>OSS（对象存储服务）</strong>：</p>
+<ul>
+<li>适合静态数据存储，如图片、视频、音频、日志文件、备份数据等。</li>
+<li>常用于内容分发、静态网站托管、大数据存储与处理、云上备份和归档。</li>
+</ul>
+</li>
+<li><p><strong>NAS（网络附加存储）</strong>：</p>
+<ul>
+<li>适合需要多台ECS实例共享同一文件系统的场景，如日志存储、共享文件系统、开发环境或分布式应用。</li>
+<li>常用于企业应用共享、数据分析任务和容器化应用存储等。</li>
+</ul>
+</li>
+</ol>
+<h3 id="（四）实验结论或体会"><a href="#（四）实验结论或体会" class="headerlink" title="（四）实验结论或体会"></a>（四）实验结论或体会</h3><ol>
+<li><p><strong>存储服务的选择应基于应用的特点和需求</strong>：</p>
+<ul>
+<li>对于需要高性能和低延迟的应用，如数据库和操作系统，ECS本地存储是首选。</li>
+<li>如果应用需要海量数据存储和高并发访问，如备份文件和媒体资源分发，OSS 对象存储更具优势。</li>
+<li>在需要共享文件系统的场景，如多个应用实例需要访问相同的数据，NAS 是一个合适的选择。</li>
+</ul>
+</li>
+<li><p><strong>成本与性能的权衡</strong>：</p>
+<ul>
+<li>不同的存储服务在成本上有显著差异。OSS提供多种存储类型（如低频存储、归档存储），可按需选择，降低成本。而ECS本地存储和NAS则更适合高I&#x2F;O性能要求的场景，但费用较高。</li>
+</ul>
+</li>
+<li><p><strong>云服务的灵活性和扩展性</strong>：</p>
+<ul>
+<li>阿里云存储服务通过按需扩展、按量计费的模式，提供了很大的灵活性。特别是OSS，支持海量存储的弹性扩展，适用于对数据存储量和访问需求不断增长的业务。</li>
+</ul>
+</li>
+<li><p><strong>应用场景驱动存储架构选择</strong>：</p>
+<ul>
+<li>根据具体应用场景选择适合的存储服务能显著提高效率和降低成本。例如，电商平台可以用OSS存储用户上传的图片和视频，用ECS本地存储运行数据库系统，用NAS实现日志存储和分析。</li>
+</ul>
+</li>
+</ol>
+<p>通过实验，我们可以更深入地理解不同存储服务的特点，从而在实际生产环境中根据需求做出最优选择。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/09/11/%E9%98%BF%E9%87%8C%E4%BA%91%E4%BD%93%E9%AA%8C/" data-id="cm139xlh90001s8nmgo9cafr6" data-title="阿里云体验" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-leetcode刷题笔记01" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/09/11/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B001/" class="article-date">
@@ -97,7 +286,7 @@
 <p>leetcode届的abandon。</p>
 <p>时间有限，理想的计划是系统性地学习数据结构与算法，但是计划赶不上变化，最后还是心一横，决定直接开始刷hot 100。<br>在此记录一下遇到的问题&amp;思考。</p>
 <p>一道简单题，看了一会，竟然没什么思路。也不纠结了，直接看题解，hashmap，还是很简单的。<br>key-value，可以理解为更加灵活可以反向索引的数组吧。</p>
-<p>想用vscode直接写leetcode，</p>
+<p>理解一下hashmap</p>
 
       
     </div>
@@ -338,6 +527,14 @@
       <ul>
         
           <li>
+            <a href="/2024/09/15/Graph-RAG%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A/">Graph RAG调研报告</a>
+          </li>
+        
+          <li>
+            <a href="/2024/09/11/%E9%98%BF%E9%87%8C%E4%BA%91%E4%BD%93%E9%AA%8C/">阿里云体验</a>
+          </li>
+        
+          <li>
             <a href="/2024/09/11/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B001/">leetcode刷题笔记01</a>
           </li>
         
@@ -347,10 +544,6 @@
         
           <li>
             <a href="/2024/09/03/mysql%E6%98%AF%E6%80%8E%E6%A0%B7%E5%AD%98%E5%82%A8%E7%9A%84-md/">Mysql是怎样存储的</a>
-          </li>
-        
-          <li>
-            <a href="/2024/09/03/20240903-01-15/">在MAC上用hexo+GithubPage搭建私人博客</a>
           </li>
         
       </ul>
